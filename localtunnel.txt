@@ -1,0 +1,4 @@
+npm install -g localtunnel
+lt –version
+lt –port 80
+lt –port 80 –subdomain hongkiat
