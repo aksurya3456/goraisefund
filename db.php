@@ -2,13 +2,15 @@
 $servername = "localhost";
 $username = "root";
 $password = "toor";
+$database = "goraisefund";
 
-// Create connection
-$conn = new mysqli($servername, $username, $password);
+/// Create connection
+$conn = mysqli_connect($servername, $username, $password,$database);
 
 // Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-} 
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
 echo "Connected successfully";
+
 ?>
