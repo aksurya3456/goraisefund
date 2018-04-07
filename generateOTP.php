@@ -15,12 +15,13 @@ if($_SERVER['REQUEST_METHOD']=="POST")
 	$query = "select * from otp where mobile = "+$mobile;
 	$result = mysqli_query($conn,$query);
 	echo mysqli_num_rows($result);
-	if (mysqli_num_rows($result) != 0) {
+	if (mysqli_num_rows($result) > 0) {
 		http_response_code(403);
-		$response("http_code")=403;
-		$response("message")="Mobile number already exists in the system";
+		$response["http_code"]=403;
+		$response["message"]="Mobile number already exists in the system";
 	}
 	else{
+		http_response_code(200);
 		$response["http_code"] = 200;
 		$response["message"] = "OTP Sent Successfully";
 	}
