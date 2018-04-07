@@ -1,0 +1,10 @@
+/generateOTP.php
+		{
+			"mobile":"7736156660"
+		}
+
+/validateOTP.php
+		{
+			"mobile":"7736156660",
+			"otp": 7696
+		}

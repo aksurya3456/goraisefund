@@ -1,4 +1,25 @@
-login
--name
--email
--phone
+user
++------------------+--------------+------+-----+---------+-------+
+| Field            | Type         | Null | Key | Default | Extra |
++------------------+--------------+------+-----+---------+-------+
+| emailId          | varchar(255) | NO   |     | NULL    |       |
+| firstName        | varchar(255) | NO   |     | NULL    |       |
+| middleName       | varchar(255) | YES  |     | NULL    |       |
+| lastName         | varchar(255) | YES  |     | NULL    |       |
+| subscription     | varchar(10)  | YES  |     | NULL    |       |
+| registrationTime | varchar(255) | YES  |     | NULL    |       |
+| lastLoginTime    | varchar(255) | YES  |     | NULL    |       |
+| password         | varchar(255) | YES  |     | NULL    |       |
+| isPasswordSet    | varchar(10)  | YES  |     | NULL    |       |
+| mobile           | varchar(20)  | NO   | PRI | NULL    |       |
++------------------+--------------+------+-----+---------+-------+
+
+
+otp
++--------+-------------+------+-----+---------+-------+
+| Field  | Type        | Null | Key | Default | Extra |
++--------+-------------+------+-----+---------+-------+
+| mobile | varchar(20) | NO   | PRI | NULL    |       |
+| otp    | int(11)     | YES  |     | NULL    |       |
++--------+-------------+------+-----+---------+-------+
+
